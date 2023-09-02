@@ -7,3 +7,5 @@ myDatabaseClassic.add({ name: 'Estranho', age: 32 });
 myDatabaseClassic.add({ name: 'Jody', age: 2 });
 myDatabaseClassic.remove(2);
 // myDatabaseClassic.show();
+
+export { myDatabaseClassic };

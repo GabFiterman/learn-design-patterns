@@ -1,8 +1,4 @@
-interface User {
-  name: string;
-  age: number;
-}
-
+import { User } from '../interface/user';
 export class MyDatabaseClassic {
   private static instance: MyDatabaseClassic | null = null;
   private constructor() {}
