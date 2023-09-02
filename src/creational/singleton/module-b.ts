@@ -1,12 +1,11 @@
-import { MyDatabaseClassic } from './db/my-database-classic';
-import { myDatabaseClassic as DbmoduleA } from './module-a';
+import { myDatabaseA } from './module-a';
 
-const myDatabaseClassic = MyDatabaseClassic.instance;
+const myDatabaseB = myDatabaseA;
 
-myDatabaseClassic.add({ name: 'Romildo', age: 25 });
-myDatabaseClassic.add({ name: 'Romário', age: 23 });
-myDatabaseClassic.add({ name: 'Reginald', age: 32 });
-myDatabaseClassic.add({ name: 'Raenira', age: 2 });
-myDatabaseClassic.show();
+myDatabaseB.add({ name: 'Romildo', age: 25 });
+myDatabaseB.add({ name: 'Romário', age: 23 });
+myDatabaseB.add({ name: 'Reginald', age: 32 });
+myDatabaseB.add({ name: 'Raenira', age: 2 });
+myDatabaseB.show();
 
-console.log(myDatabaseClassic === DbmoduleA);
+console.log(myDatabaseB === myDatabaseA);
