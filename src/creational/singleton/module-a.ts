@@ -1,5 +1,5 @@
 import { MyDatabaseClassic } from './db/my-database-classic';
-const myDatabaseClassic = MyDatabaseClassic.getInstance();
+const myDatabaseClassic = MyDatabaseClassic.instance;
 
 myDatabaseClassic.add({ name: 'Gabriel', age: 25 });
 myDatabaseClassic.add({ name: 'Karol', age: 23 });

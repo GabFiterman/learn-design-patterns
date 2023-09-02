@@ -1,14 +1,16 @@
 import { User } from '../interface/user';
 export class MyDatabaseClassic {
-  private static instance: MyDatabaseClassic | null = null;
-  private constructor() {}
+  private static _instance: MyDatabaseClassic | null = null;
   private users: User[] = [];
 
-  static getInstance(): MyDatabaseClassic {
-    if (MyDatabaseClassic.instance === null) {
-      MyDatabaseClassic.instance = new MyDatabaseClassic();
+  private constructor() {}
+
+  static get instance(): MyDatabaseClassic {
+    if (MyDatabaseClassic._instance === null) {
+      MyDatabaseClassic._instance = new MyDatabaseClassic();
     }
-    return MyDatabaseClassic.instance;
+
+    return MyDatabaseClassic._instance;
   }
 
   add(user: User): void {

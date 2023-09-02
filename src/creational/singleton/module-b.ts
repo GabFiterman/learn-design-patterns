@@ -1,7 +1,7 @@
 import { MyDatabaseClassic } from './db/my-database-classic';
 import { myDatabaseClassic as DbmoduleA } from './module-a';
 
-const myDatabaseClassic = MyDatabaseClassic.getInstance();
+const myDatabaseClassic = MyDatabaseClassic.instance;
 
 myDatabaseClassic.add({ name: 'Romildo', age: 25 });
 myDatabaseClassic.add({ name: 'Romário', age: 23 });
